@@ -21,4 +21,4 @@ If you dont't know JSON-RPC, read this
 * There are [documented methods](https://kb.i-doit.com/pages/viewpage.action?pageId=7831613#API(JSONRPC)-Methoden) that work but seems to be old. For example `cmdb.location_tree` which is not listed on [API Methoden](https://kb.i-doit.com/display/de/API+Methoden).
 
 ## Sphinx documentation 
-Can be found [here] (https://htmlpreview.github.io/?https://github.com/x84net/idoitAPI/blob/main/doc/html/index.html)
+Can be found [here](https://htmlpreview.github.io/?https://github.com/x84net/idoitAPI/blob/main/doc/html/index.html)
