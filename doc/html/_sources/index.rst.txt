@@ -1,0 +1,79 @@
+
+=========
+idoitAPI
+=========
+
+**idoitAPI** is a Python Class to access the `i-doit JSON-RPC API
+<https://kb.i-doit.com/pages/viewpage.action?pageId=37355644>`_ .
+
+.. note::
+
+   This project is work in progress.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+
+idoitAPI
+========
+
+.. autoclass:: idoit.IdoitAPI
+   :members:
+   :undoc-members:
+   :private-members:
+
+
+Modules
+=======
+idoitSettings
+-------------
+.. automodule:: idoitSettings
+   :members:
+
+Examples
+========
+Example_add_new_switch.py
+-------------------------
+.. automodule:: examples.Example_add_new_switch
+   :members:
+
+Example_connect_ports.py
+------------------------
+.. automodule:: examples.Example_connect_ports
+   :members:
+
+Example_Constants.py
+--------------------
+.. automodule:: examples.Example_Constants
+   :members:
+
+Example_create_panel_1ru_24x_rj45.py
+------------------------------------
+.. automodule:: examples.Example_create_panel_1ru_24x_rj45
+   :members:
+
+Example_find_name_ip_serial.py
+------------------------------
+.. automodule:: examples.Example_find_name_ip_serial
+   :members:
+
+Example_List_Switch_Info.py
+---------------------------
+.. automodule:: examples.Example_List_Switch_Info
+   :members:
+
+Example_read_CDMB_status_of_device.py
+-------------------------------------
+.. automodule:: examples.Example_read_CDMB_status_of_device
+   :members:
+
+Example_Request_grouping.py
+---------------------------
+.. automodule:: examples.Example_Request_grouping
+   :members:
