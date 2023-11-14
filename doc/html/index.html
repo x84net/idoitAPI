@@ -1,92 +1,111 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>idoitAPI &mdash; idoitAPI 0.5.1 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-
-  
-  
-  
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=b9afe91b"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="#" class="icon icon-home" alt="Documentation Home"> idoitAPI
           
-
-          
+          <a href="#" class="icon icon-home">
+            idoitAPI
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <!-- Local TOC -->
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">idoitAPI</a><ul>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
-<li><a class="reference internal" href="#id1">idoitAPI</a></li>
+<li><a class="reference internal" href="#id1">idoitAPI</a><ul>
+<li><a class="reference internal" href="#idoit.IdoitAPI"><code class="docutils literal notranslate"><span class="pre">IdoitAPI</span></code></a><ul>
+<li><a class="reference internal" href="#idoit.IdoitAPI.log_json_request"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.log_json_request</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI._api_login"><code class="docutils literal notranslate"><span class="pre">IdoitAPI._api_login()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.api_logout"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.api_logout()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.copy_location"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.copy_location()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.create_object_by_type"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.create_object_by_type()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.delete_object"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.delete_object()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.extract_contract_assignment"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.extract_contract_assignment()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.extract_general"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.extract_general()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.extract_location"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.extract_location()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.extract_service_assignment"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.extract_service_assignment()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.find_host_ip_serial"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.find_host_ip_serial()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.find_rack"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.find_rack()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_all_firewalls"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_all_firewalls()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_all_loadbalancers"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_all_loadbalancers()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_all_os"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_all_os()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_all_routers"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_all_routers()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_all_servers"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_all_servers()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_all_switches"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_all_switches()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_category_from_object"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_category_from_object()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_category_hostaddress"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_category_hostaddress()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_constants"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_constants()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_contact"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_contact()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_contract_assignment"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_contract_assignment()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_custom_category_info"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_custom_category_info()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_dropdown_values"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_dropdown_values()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_filtered_objects"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_filtered_objects()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_general"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_general()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_global_category_info"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_global_category_info()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_idoit_version"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_idoit_version()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_ipv4_address"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_ipv4_address()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_location"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_location()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_object"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_object()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_object_type_categories_by_obj_type"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_object_type_categories_by_obj_type()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_objects_by_type"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_objects_by_type()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_report"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_report()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_service_assignment"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_service_assignment()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_specific_category_info"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_specific_category_info()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.get_version"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.get_version()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.purge_object"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.purge_object()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.quickpurge_object"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.quickpurge_object()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.recycle_object"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.recycle_object()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.remove_all_ip_addresses"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.remove_all_ip_addresses()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.remove_ip_entry"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.remove_ip_entry()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.search_text"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.search_text()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.send_batch"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.send_batch()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.send_rpc"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.send_rpc()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.send_rpc_d"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.send_rpc_d()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.set_contract_assignment"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.set_contract_assignment()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.set_general"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.set_general()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.set_ipv4_address"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.set_ipv4_address()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.set_location"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.set_location()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.set_service_assignment"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.set_service_assignment()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.update_cmdb_status"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.update_cmdb_status()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.update_object_category"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.update_object_category()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.update_object_category_entry"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.update_object_category_entry()</span></code></a></li>
+<li><a class="reference internal" href="#idoit.IdoitAPI.update_object_title"><code class="docutils literal notranslate"><span class="pre">IdoitAPI.update_object_title()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#modules">Modules</a><ul>
 <li><a class="reference internal" href="#module-idoitSettings">idoitSettings</a></li>
 </ul>
@@ -95,7 +114,10 @@
 <li><a class="reference internal" href="#module-examples.Example_add_new_switch">Example_add_new_switch.py</a></li>
 <li><a class="reference internal" href="#module-examples.Example_connect_ports">Example_connect_ports.py</a></li>
 <li><a class="reference internal" href="#module-examples.Example_Constants">Example_Constants.py</a></li>
-<li><a class="reference internal" href="#module-examples.Example_create_panel_1ru_24x_rj45">Example_create_panel_1ru_24x_rj45.py</a></li>
+<li><a class="reference internal" href="#module-examples.Example_create_panel_1ru_24x_rj45">Example_create_panel_1ru_24x_rj45.py</a><ul>
+<li><a class="reference internal" href="#examples.Example_create_panel_1ru_24x_rj45.create_panel_1ru_24x_rj45_new"><code class="docutils literal notranslate"><span class="pre">create_panel_1ru_24x_rj45_new()</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#module-examples.Example_find_name_ip_serial">Example_find_name_ip_serial.py</a></li>
 <li><a class="reference internal" href="#module-examples.Example_List_Switch_Info">Example_List_Switch_Info.py</a></li>
 <li><a class="reference internal" href="#module-examples.Example_read_CDMB_status_of_device">Example_read_CDMB_status_of_device.py</a></li>
@@ -106,71 +128,32 @@
 </li>
 </ul>
 </div>
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="#">idoitAPI</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
-        
-      <li>idoitAPI</li>
-    
-    
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">idoitAPI</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="idoitapi">
-<h1>idoitAPI<a class="headerlink" href="#idoitapi" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="idoitapi">
+<h1>idoitAPI<a class="headerlink" href="#idoitapi" title="Link to this heading"></a></h1>
 <p><strong>idoitAPI</strong> is a Python Class to access the <a class="reference external" href="https://kb.i-doit.com/pages/viewpage.action?pageId=37355644">i-doit JSON-RPC API</a> .</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -178,17 +161,17 @@
 </div>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="indices-and-tables">
-<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<section id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 </ul>
-</div>
-<div class="section" id="id1">
-<h2>idoitAPI<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id1">
+<h2>idoitAPI<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="idoit.IdoitAPI">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">idoit.</span></span><span class="sig-name descname"><span class="pre">IdoitAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verify</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apikey</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">idoit.</span></span><span class="sig-name descname"><span class="pre">IdoitAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verify</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apikey</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI" title="Link to this definition"></a></dt>
 <dd><p>Python3 class to access i-doit JSON-RPC API</p>
 <dl class="simple">
 <dt>API methods - Namespace idoit:</dt><dd><p><strong>Methods currently available in the i-doit JSON-RPC API</strong></p>
@@ -213,24 +196,24 @@
 <li><p>cmdb.object.markAsMassChangeTemplate - <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">implemented</span></code></p></li>
 <li><p>cmdb.objects.read - <code class="docutils literal notranslate"><span class="pre">Implemented</span></code></p></li>
 <li><p>cmdb.category.save - <code class="docutils literal notranslate"><span class="pre">Implemented</span></code></p></li>
-<li><p>cmdb.category.create - <code class="docutils literal notranslate"><span class="pre">Implemented</span> <span class="pre">but</span> <span class="pre">fiXXXme</span></code></p></li>
+<li><p>cmdb.category.create - <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">Implemented</span></code></p></li>
 <li><p>cmdb.category.read - <code class="docutils literal notranslate"><span class="pre">Implemented</span></code></p></li>
 <li><p>cmdb.category.update - <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">implemented</span></code></p></li>
 <li><p>cmdb.category.delete - <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">implemented</span></code></p></li>
 <li><p>cmdb.category.quickpurge - <code class="docutils literal notranslate"><span class="pre">Implemented</span> <span class="pre">-</span> <span class="pre">UNTESTED</span> <span class="pre">FIXXXME</span></code></p></li>
-<li><p>cmdb.category.purge - <code class="docutils literal notranslate"><span class="pre">Implemented</span> <span class="pre">-</span> <span class="pre">UNTESTED</span> <span class="pre">FIXXXME</span></code></p></li>
+<li><p>cmdb.category.purge - <code class="docutils literal notranslate"><span class="pre">Implemented</span></code></p></li>
 <li><p>cmdb.category.recycle - <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">implemented</span></code></p></li>
 <li><p>cmdb.category.archive - <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">implemented</span></code></p></li>
 <li><p>cmdb.dialog.read - <code class="docutils literal notranslate"><span class="pre">Implemented</span></code></p></li>
 <li><p>cmdb.dialog.create - <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">implemented</span></code></p></li>
 <li><p>cmdb.dialog.update - <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">implemented</span></code></p></li>
 <li><p>cmdb.dialog.delete - <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">implemented</span></code></p></li>
-<li><p>cmdb.reports.read - <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">implemented</span></code></p></li>
+<li><p>cmdb.reports.read - <code class="docutils literal notranslate"><span class="pre">Implemented</span></code></p></li>
 </ul>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>base_url</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Domain Name</p></li>
 <li><p><strong>verify</strong> – <code class="docutils literal notranslate"><span class="pre">bool</span></code>: Verify SSL Connection?</p></li>
@@ -240,7 +223,7 @@
 <li><p><strong>apikey</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: API Key for this i-doit instance - can be left empty and set by environment variable IDOIT_APIKEY</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>requests.HTTPError</strong> – Raised by requests lib.</p></li>
 <li><p><strong>ValueError</strong> – Raised when JSON-RPC PORT request returns not HTTP 200 statuscode.</p></li>
@@ -250,20 +233,13 @@
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.log_json_request">
-<span class="sig-name descname"><span class="pre">log_json_request</span></span><a class="headerlink" href="#idoit.IdoitAPI.log_json_request" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">log_json_request</span></span><a class="headerlink" href="#idoit.IdoitAPI.log_json_request" title="Link to this definition"></a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">bool</span></code>: Set to <cite>True</cite> to log JSON requests send to i-doit.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="idoit.IdoitAPI.return_query_do_not_send">
-<span class="sig-name descname"><span class="pre">return_query_do_not_send</span></span><a class="headerlink" href="#idoit.IdoitAPI.return_query_do_not_send" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">bool</span></code>: Guard to get JSON query from method instead of sending it.
-Can be used to get <cite>obj_dict</cite> for build_batch().</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI._api_login">
-<span class="sig-name descname"><span class="pre">_api_login</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI._api_login" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_api_login</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI._api_login" title="Link to this definition"></a></dt>
 <dd><p>Login into i-doit and set session ID for later use</p>
 <ul class="simple">
 <li><p>Uses: <code class="docutils literal notranslate"><span class="pre">idoit.login</span></code></p></li>
@@ -272,7 +248,7 @@ Can be used to get <cite>obj_dict</cite> for build_batch().</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.api_logout">
-<span class="sig-name descname"><span class="pre">api_logout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.api_logout" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">api_logout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.api_logout" title="Link to this definition"></a></dt>
 <dd><p>Terminate active session to i-doit</p>
 <ul class="simple">
 <li><p>Uses: <code class="docutils literal notranslate"><span class="pre">idoit.logout</span></code></p></li>
@@ -280,50 +256,31 @@ Can be used to get <cite>obj_dict</cite> for build_batch().</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="idoit.IdoitAPI.build_batch">
-<span class="sig-name descname"><span class="pre">build_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.build_batch" title="Permalink to this definition">¶</a></dt>
-<dd><p>Attach object to a list to be submited as batch request within a single call.
-Dataset ID equals to length of list, beginning with 1 as first ID
-as of JSON-RPC 2.0 IDs should not be null.</p>
-<p>obj_dict can be created by calling the appropriate method with return_query_do_not_send
-guard set.</p>
+<dt class="sig sig-object py" id="idoit.IdoitAPI.copy_location">
+<span class="sig-name descname"><span class="pre">copy_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">from_obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_obj_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.copy_location" title="Link to this definition"></a></dt>
+<dd><p>Copy location from one object to another</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>grp_list</strong> – <code class="docutils literal notranslate"><span class="pre">list</span></code>: List of JSON objects</p></li>
-<li><p><strong>obj_dict</strong> – <code class="docutils literal notranslate"><span class="pre">dict</span></code>: JSON query / object</p></li>
+<li><p><strong>from_obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object to copy from</p></li>
+<li><p><strong>to_obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object to copy to</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>List of JSON-RPC objects</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="idoit.IdoitAPI.create_category">
-<span class="sig-name descname"><span class="pre">create_category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.create_category" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Experimental</strong></p>
-<ul class="simple">
-<li><p>Uses: <code class="docutils literal notranslate"><span class="pre">cmdb.category.create</span></code></p></li>
-<li><p><strong>how to create unique obj_id?</strong></p></li>
-</ul>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>JSON object of response or raise exception.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict with keys ‘title’, ‘id’, ‘location_path’ or raise exception as returned by get_location()</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.create_object_by_type">
-<span class="sig-name descname"><span class="pre">create_object_by_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Default</span> <span class="pre">Title</span> <span class="pre">-</span> <span class="pre">CHANGEME'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">purpose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">categories</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.create_object_by_type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">create_object_by_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Default</span> <span class="pre">Title</span> <span class="pre">-</span> <span class="pre">CHANGEME'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">purpose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">categories</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.create_object_by_type" title="Link to this definition"></a></dt>
 <dd><p>Create a new Object of a certain type</p>
 <ul class="simple">
 <li><p>Uses: <code class="docutils literal notranslate"><span class="pre">cmdb.object.create</span></code></p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>obj_type</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Object type constant to fetch.</p></li>
 <li><p><strong>title</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Descriptive title of object.</p></li>
@@ -361,14 +318,14 @@ guard set.</p>
 <li><p>8: <code class="docutils literal notranslate"><span class="pre">int</span></code>: under repair</p></li>
 <li><p>9: <code class="docutils literal notranslate"><span class="pre">int</span></code>: delivered from repair</p></li>
 <li><p>10: <code class="docutils literal notranslate"><span class="pre">int</span></code>: inoperative</p></li>
-<li><p>11: <code class="docutils literal notranslate"><span class="pre">int</span></code>: stored</p></li>
+<li><p>11: <code class="docutils literal notranslate"><span class="pre">int</span></code>: stored - constant ‘C__CMDB_STATUS__STORED’</p></li>
 <li><p>12: <code class="docutils literal notranslate"><span class="pre">int</span></code>: scrapped</p></li>
 <li><p>15: <code class="docutils literal notranslate"><span class="pre">int</span></code>: swapped</p></li>
 </ul>
 </dd></dl>
 
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -376,19 +333,19 @@ guard set.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.delete_object">
-<span class="sig-name descname"><span class="pre">delete_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">move_to</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'C__RECORD_STATUS__ARCHIVED'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.delete_object" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">delete_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">move_to</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'C__RECORD_STATUS__ARCHIVED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.delete_object" title="Link to this definition"></a></dt>
 <dd><p><strong>Delete</strong> an object from CMDB, per default delete = archived</p>
 <ul class="simple">
 <li><p>Uses: <code class="docutils literal notranslate"><span class="pre">cmdb.object.delete</span></code></p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Object ID of i-doit object</p></li>
+<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object</p></li>
 <li><p><strong>move_to</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: <strong>Status constant</strong> to move to</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -404,18 +361,76 @@ guard set.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.extract_contract_assignment">
+<span class="sig-name descname"><span class="pre">extract_contract_assignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jsonrpc_response</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.extract_contract_assignment" title="Link to this definition"></a></dt>
+<dd><p>Extract contract assignment from response of json-rpc call to ‘C__CATG__CONTRACT_ASSIGNMENT’
+:param jsonrpc_response: <code class="docutils literal notranslate"><span class="pre">str</span></code>: json-rpc response object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dict with contract ‘title’ and ‘id’ if contract is set, else None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.extract_general">
+<span class="sig-name descname"><span class="pre">extract_general</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jsonrpc_response</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.extract_general" title="Link to this definition"></a></dt>
+<dd><p>Extract title, id, category, cmdb_status, description, purpose, tags from response of json-rpc call to ‘C__CATG__GLOBAL’
+=&gt; to be used with get_general()
+:param obj_id: <code class="docutils literal notranslate"><span class="pre">str</span></code>: json-rpc response object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>‘title’, ‘id’, ‘category’, ‘cmdb_status’, ‘description’, ‘purpose’, ‘tag’</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict with keys</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.extract_location">
+<span class="sig-name descname"><span class="pre">extract_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jsonrpc_response</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.extract_location" title="Link to this definition"></a></dt>
+<dd><p>Extract title, location ID and path of location from response of json-rpc call to ‘C__CATG__LOCATION’
+=&gt; to be used with get_location()</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jsonrpc_response</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: json-rpc response object</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>‘title’, ‘id’, ‘location_path’ or raise exception</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dict with keys</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.extract_service_assignment">
+<span class="sig-name descname"><span class="pre">extract_service_assignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jsonrpc_response</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.extract_service_assignment" title="Link to this definition"></a></dt>
+<dd><p>Extract service assignment from response of json-rpc call to ‘C__CATG__IT_SERVICE’
+:param jsonrpc_response: <code class="docutils literal notranslate"><span class="pre">str</span></code>: json-rpc response object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dict with contract ‘title’ and ‘id’ if service is set, else None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.find_host_ip_serial">
-<span class="sig-name descname"><span class="pre">find_host_ip_serial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.find_host_ip_serial" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">find_host_ip_serial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.find_host_ip_serial" title="Link to this definition"></a></dt>
 <dd><p>Query i-doit for a set of hostname, IP address and serial number in a single call.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>host</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: hostname to look for, might be empty</p></li>
 <li><p><strong>ip</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: ip address to look for, might be empty</p></li>
 <li><p><strong>serial</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: serial number to look for, might be empty</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Dictionary with given host, IP, serial as keys and a list of object IDs
 with matching results as value. Only keys with search results will be present.</p>
 </dd>
@@ -424,28 +439,54 @@ with matching results as value. Only keys with search results will be present.</
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.find_rack">
-<span class="sig-name descname"><span class="pre">find_rack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r_title</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.find_rack" title="Permalink to this definition">¶</a></dt>
-<dd><p>Query i-doit for an object type ‘enclosure’ with a given title</p>
+<span class="sig-name descname"><span class="pre">find_rack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r_title</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.find_rack" title="Link to this definition"></a></dt>
+<dd><p>Query i-doit for an object type ‘enclosure’ with a given title
+:param r_title: <code class="docutils literal notranslate"><span class="pre">str</span></code>: Enclosure title</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>r_title</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Enclosure title</p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JSON object of response or raise exception.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>JSON object of response or raise exception.</p>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.get_all_firewalls">
+<span class="sig-name descname"><span class="pre">get_all_firewalls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_all_firewalls" title="Link to this definition"></a></dt>
+<dd><p>Get a list of all devices in category Hardware-&gt;Firewall</p>
+<ul class="simple">
+<li><p>filter status 2 = Normal (not archived or deleted)</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JSON object of response or raise exception.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.get_all_loadbalancers">
+<span class="sig-name descname"><span class="pre">get_all_loadbalancers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_all_loadbalancers" title="Link to this definition"></a></dt>
+<dd><p>Get a list of all devices in category Hardware-&gt;Loadbalancer</p>
+<ul class="simple">
+<li><p>filter status 2 = Normal (not archived or deleted)</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_all_os">
-<span class="sig-name descname"><span class="pre">get_all_os</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_all_os" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_all_os</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_all_os" title="Link to this definition"></a></dt>
 <dd><p>Get a list of all available operating systems</p>
 <ul class="simple">
 <li><p>filter type 35 = OS</p></li>
 <li><p>filter status 2 = Normal (not archived or deleted)</p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -453,14 +494,13 @@ with matching results as value. Only keys with search results will be present.</
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_all_routers">
-<span class="sig-name descname"><span class="pre">get_all_routers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_all_routers" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_all_routers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_all_routers" title="Link to this definition"></a></dt>
 <dd><p>Get a list of all devices in category Hardware-&gt;Routers</p>
 <ul class="simple">
-<li><p>filter type 7 = Router</p></li>
 <li><p>filter status 2 = Normal (not archived or deleted)</p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -468,14 +508,14 @@ with matching results as value. Only keys with search results will be present.</
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_all_servers">
-<span class="sig-name descname"><span class="pre">get_all_servers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_all_servers" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_all_servers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_all_servers" title="Link to this definition"></a></dt>
 <dd><p>Get a list of all devices in category Hardware-&gt;Servers</p>
 <ul class="simple">
 <li><p>filter type 5 = Server - constant ‘C__OBJTYPE__SERVER’</p></li>
 <li><p>filter status 2 = Normal (not archived or deleted)</p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -483,14 +523,13 @@ with matching results as value. Only keys with search results will be present.</
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_all_switches">
-<span class="sig-name descname"><span class="pre">get_all_switches</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_all_switches" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_all_switches</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_all_switches" title="Link to this definition"></a></dt>
 <dd><p>Get a list of all devices in category Hardware-&gt;Switches</p>
 <ul class="simple">
-<li><p>filter type 6 = Switches</p></li>
 <li><p>filter status 2 = Normal (not archived or deleted)</p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -498,19 +537,19 @@ with matching results as value. Only keys with search results will be present.</
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_category_from_object">
-<span class="sig-name descname"><span class="pre">get_category_from_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_category_from_object" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_category_from_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_category_from_object" title="Link to this definition"></a></dt>
 <dd><p>Read a certain category of an object</p>
 <ul class="simple">
 <li><p>Uses: <code class="docutils literal notranslate"><span class="pre">cmdb.category.read</span></code></p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Object ID of i-doit object.</p></li>
+<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object.</p></li>
 <li><p><strong>category</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: <strong>Category constant</strong>.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -518,10 +557,10 @@ with matching results as value. Only keys with search results will be present.</
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_category_hostaddress">
-<span class="sig-name descname"><span class="pre">get_category_hostaddress</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_category_hostaddress" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_category_hostaddress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_category_hostaddress" title="Link to this definition"></a></dt>
 <dd><p>get structure of category host address</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -529,27 +568,53 @@ with matching results as value. Only keys with search results will be present.</
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_constants">
-<span class="sig-name descname"><span class="pre">get_constants</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_constants" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_constants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_constants" title="Link to this definition"></a></dt>
 <dd><p>Fetch defined constants from i-doit</p>
 <ul class="simple">
 <li><p>Uses: <code class="docutils literal notranslate"><span class="pre">idoit.constants</span></code></p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.get_contact">
+<span class="sig-name descname"><span class="pre">get_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_contact" title="Link to this definition"></a></dt>
+<dd><p>Get category contact
+:param obj_id: <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object to get contacts from</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>json rpc response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.get_contract_assignment">
+<span class="sig-name descname"><span class="pre">get_contract_assignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_contract_assignment" title="Link to this definition"></a></dt>
+<dd><p>Get contract assignment from an object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict with contract ‘title’ and ‘id’ if not batch_request</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_custom_category_info">
-<span class="sig-name descname"><span class="pre">get_custom_category_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cat_c_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_custom_category_info" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_custom_category_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cat_c_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_custom_category_info" title="Link to this definition"></a></dt>
 <dd><p>get structure of a certain custom category</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>cat_c_id</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Custom category constant</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -557,40 +622,52 @@ with matching results as value. Only keys with search results will be present.</
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_dropdown_values">
-<span class="sig-name descname"><span class="pre">get_dropdown_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">property_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_dropdown_values" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_dropdown_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">property_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_dropdown_values" title="Link to this definition"></a></dt>
 <dd><p>get values from drop down menus like manufacturer, model, CPU type etc.
 Use get_global_category_info(&lt;category&gt;) to find the property_name</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_filtered_objects">
-<span class="sig-name descname"><span class="pre">get_filtered_objects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">categories</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_filtered_objects" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_filtered_objects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">categories</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_filtered_objects" title="Link to this definition"></a></dt>
 <dd><p>Fetch a list of objects filtered by values in filter_dict and/or categories list</p>
 <ul class="simple">
 <li><p>Uses: <code class="docutils literal notranslate"><span class="pre">cmdb.objects.read</span></code></p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filter_dict</strong> – <code class="docutils literal notranslate"><span class="pre">dict</span></code>: Dictionary with keys to filter request</p></li>
 <li><p><strong>categories</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: List of <strong>Category constant(s)</strong>.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.get_general">
+<span class="sig-name descname"><span class="pre">get_general</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_general" title="Link to this definition"></a></dt>
+<dd><p>Get title, category, cmdb_status, description, purpose, tags from general
+:param obj_id: <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object to get genreal information from</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_global_category_info">
-<span class="sig-name descname"><span class="pre">get_global_category_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cat_g_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_global_category_info" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_global_category_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cat_g_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_global_category_info" title="Link to this definition"></a></dt>
 <dd><p>get structure of a certain global category</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>cat_g_id</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Global category constant</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -598,13 +675,13 @@ Use get_global_category_info(&lt;category&gt;) to find the property_name</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_idoit_version">
-<span class="sig-name descname"><span class="pre">get_idoit_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_idoit_version" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_idoit_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_idoit_version" title="Link to this definition"></a></dt>
 <dd><p>Fetch information about i-doit and the current user</p>
 <ul class="simple">
 <li><p>Uses: <code class="docutils literal notranslate"><span class="pre">idoit.version</span></code></p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -612,35 +689,51 @@ Use get_global_category_info(&lt;category&gt;) to find the property_name</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_ipv4_address">
-<span class="sig-name descname"><span class="pre">get_ipv4_address</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fqdn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_ipv4_address" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetch IPv4 Address from object. Per default the ‘primary_hostaddress’
-will be returned.</p>
+<span class="sig-name descname"><span class="pre">get_ipv4_address</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fqdn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_ipv4_address" title="Link to this definition"></a></dt>
+<dd><p>Fetch IPv4 Address from object. Per default the ‘primary_hostaddress’ will be returned.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Object ID of i-doit object</p></li>
+<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object</p></li>
 <li><p><strong>primary</strong> – <code class="docutils literal notranslate"><span class="pre">bool</span></code>: When primery=False first match for ‘hostaddress’ will be returned.</p></li>
 <li><p><strong>fqdn</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: If fqdn is true a tupple (ip,fqdn) will be returned. <strong>fqdn might be ‘None’!</strong></p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>JSON object of response or raise exception.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>‘ip’ and maybe ‘hostname’</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dictionary with keys</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.get_location">
+<span class="sig-name descname"><span class="pre">get_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_location" title="Link to this definition"></a></dt>
+<dd><p>Get title, location ID and path of location from an object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict with keys title, id, location_path or raise exception</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_object">
-<span class="sig-name descname"><span class="pre">get_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_object" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_object" title="Link to this definition"></a></dt>
 <dd><p>Read general informations of an object specified by it’s ID</p>
 <ul class="simple">
 <li><p>Uses: <code class="docutils literal notranslate"><span class="pre">cmdb.object.read</span></code></p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Object ID of i-doit object</p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -648,13 +741,13 @@ will be returned.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_object_type_categories_by_obj_type">
-<span class="sig-name descname"><span class="pre">get_object_type_categories_by_obj_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_object_type_categories_by_obj_type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_object_type_categories_by_obj_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_object_type_categories_by_obj_type" title="Link to this definition"></a></dt>
 <dd><p>Fetch all categories that belong to a certain object</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>obj_type</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Object type constant to fetch</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -662,13 +755,13 @@ will be returned.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_objects_by_type">
-<span class="sig-name descname"><span class="pre">get_objects_by_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_objects_by_type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_objects_by_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_objects_by_type" title="Link to this definition"></a></dt>
 <dd><p>Fetch a list of objects filtered by obj_type, title, limit</p>
 <ul class="simple">
 <li><p>Uses: <code class="docutils literal notranslate"><span class="pre">cmdb.objects.read</span></code></p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>obj_type</strong> – <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">/</span> <span class="pre">str</span></code>: Number or constant of object type</p></li>
 <li><p><strong>status</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code> default 2 = Normal (not archived or deleted)</p></li>
@@ -685,21 +778,49 @@ will be returned.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.get_report">
+<span class="sig-name descname"><span class="pre">get_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_report" title="Link to this definition"></a></dt>
+<dd><p>Get the results of a predefined report</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rep_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: ID of the predefined report</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON object of response or raise exception.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.get_service_assignment">
+<span class="sig-name descname"><span class="pre">get_service_assignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_service_assignment" title="Link to this definition"></a></dt>
+<dd><p>Get service assignment from an object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict with contract ‘title’ and ‘id’ if not batch_request</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_specific_category_info">
-<span class="sig-name descname"><span class="pre">get_specific_category_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cat_s_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_specific_category_info" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_specific_category_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cat_s_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_specific_category_info" title="Link to this definition"></a></dt>
 <dd><p>get structure of a certain specific category</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>cat_s_id</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Specific category constant</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -707,26 +828,26 @@ will be returned.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.get_version">
-<span class="sig-name descname"><span class="pre">get_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_version" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.get_version" title="Link to this definition"></a></dt>
 <dd><p>Get version of this class</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.purge_object">
-<span class="sig-name descname"><span class="pre">purge_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.purge_object" title="Permalink to this definition">¶</a></dt>
-<dd><p>UNTESTED FIXXXME - Purge category entry of an object from CMDB</p>
+<span class="sig-name descname"><span class="pre">purge_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.purge_object" title="Link to this definition"></a></dt>
+<dd><p>Purge category entry of an object from CMDB, for example ip entries from category host address</p>
 <ul class="simple">
 <li><p>Uses: <code class="docutils literal notranslate"><span class="pre">cmdb.category.purge</span></code></p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object</p></li>
 <li><p><strong>category</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Category constant</p></li>
 <li><p><strong>entry</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Entry identificator</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -734,20 +855,20 @@ will be returned.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.quickpurge_object">
-<span class="sig-name descname"><span class="pre">quickpurge_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat_e_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.quickpurge_object" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">quickpurge_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat_e_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.quickpurge_object" title="Link to this definition"></a></dt>
 <dd><p>UNTESTED FIXXXME - Purge category entry of an object from CMDB - if quickpurge is active</p>
 <ul class="simple">
 <li><p>Uses: <code class="docutils literal notranslate"><span class="pre">cmdb.category.quickpurge</span></code></p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object</p></li>
 <li><p><strong>category</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Category constant</p></li>
 <li><p><strong>cat_e_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Entry identificator</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -755,33 +876,61 @@ will be returned.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.recycle_object">
-<span class="sig-name descname"><span class="pre">recycle_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.recycle_object" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">recycle_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.recycle_object" title="Link to this definition"></a></dt>
 <dd><p>Move object from archived or deleted back to normal</p>
 <ul class="simple">
 <li><p>Uses: <code class="docutils literal notranslate"><span class="pre">cmdb.object.recycle</span></code></p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Object ID of i-doit object</p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.remove_all_ip_addresses">
+<span class="sig-name descname"><span class="pre">remove_all_ip_addresses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.remove_all_ip_addresses" title="Link to this definition"></a></dt>
+<dd><p>remove all ip entrys from object
+:param obj_id: <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object to remove IPs from</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>‘entry_id’, ‘ip’, ‘hostname’, ‘domain’, ‘is_primary’</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of dicts with keys</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.remove_ip_entry">
+<span class="sig-name descname"><span class="pre">remove_ip_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip_address</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.remove_ip_entry" title="Link to this definition"></a></dt>
+<dd><p>remove given ip entry from object
+:param obj_id: <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object to remove IPs from
+:param ip_address: <code class="docutils literal notranslate"><span class="pre">str</span></code>: IP to remove</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>json rpc response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.search_text">
-<span class="sig-name descname"><span class="pre">search_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.search_text" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">search_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.search_text" title="Link to this definition"></a></dt>
 <dd><p>Simple search - like in i-doit top right</p>
 <ul class="simple">
 <li><p>Uses: <code class="docutils literal notranslate"><span class="pre">idoit.search</span></code></p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>text</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Text to search for.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -789,29 +938,30 @@ will be returned.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.send_batch">
-<span class="sig-name descname"><span class="pre">send_batch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.send_batch" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">send_batch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.send_batch" title="Link to this definition"></a></dt>
 <dd><p>Submit the currently queued requests and clear the list of queued requests.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Tuple with result of batch request and batch list that has been send.</p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple with result of batch request, batch list that has been send and
+dictionary with keys = JSON-RPC request ID.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.send_rpc">
-<span class="sig-name descname"><span class="pre">send_rpc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.send_rpc" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">send_rpc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.send_rpc" title="Link to this definition"></a></dt>
 <dd><p>Generic method to send json-rpc call to server.
 Only set method and method specific params. Parameters like <strong>apikey</strong> and <strong>language</strong> etc will be added.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>method</strong> – <code class="docutils literal notranslate"><span class="pre">dict</span></code>: JSON-RPC method to use</p></li>
 <li><p><strong>params_dict</strong> – <code class="docutils literal notranslate"><span class="pre">dict</span></code>: Method specific parameters.</p></li>
 <li><p><strong>header</strong> – <code class="docutils literal notranslate"><span class="pre">dict</span></code>: Header if other than default needs to be used.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -819,16 +969,16 @@ Only set method and method specific params. Parameters like <strong>apikey</stro
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.send_rpc_d">
-<span class="sig-name descname"><span class="pre">send_rpc_d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.send_rpc_d" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">send_rpc_d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.send_rpc_d" title="Link to this definition"></a></dt>
 <dd><p>Generic method to send json-rpc call to server</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> – <code class="docutils literal notranslate"><span class="pre">dict</span></code>: supply your own data dictionary</p></li>
 <li><p><strong>batch</strong> – <code class="docutils literal notranslate"><span class="pre">bool</span></code>: RPC call is batch request.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception or when batch is True
 dictionary with object IDs as keys.</p>
 </dd>
@@ -836,18 +986,129 @@ dictionary with object IDs as keys.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.set_contract_assignment">
+<span class="sig-name descname"><span class="pre">set_contract_assignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contract_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.set_contract_assignment" title="Link to this definition"></a></dt>
+<dd><p>Set contract assignment from an object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object</p></li>
+<li><p><strong>contract_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Contract ID of contract to assign</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict with contract ‘title’ and ‘id’ if not batch_request</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.set_general">
+<span class="sig-name descname"><span class="pre">set_general</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.set_general" title="Link to this definition"></a></dt>
+<dd><p>Set ‘title’, ‘category’, ‘cmdb_status’, ‘description’, ‘purpose’, ‘tags’ from dict in general</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object to get contacts from</p></li>
+<li><p><strong>g_dict</strong> – <code class="docutils literal notranslate"><span class="pre">dict</span></code>: Dictionary with vales to set, purpose and tags might be empty
+‘category’, ‘purpose’ and ‘tags’ are not set if None</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Purpose</span> <span class="pre">IDs</span></span></dt>
+<dd><ul class="simple">
+<li><p>‘1’: <code class="docutils literal notranslate"><span class="pre">int</span></code>: Produktion</p></li>
+<li><p>‘2’: <code class="docutils literal notranslate"><span class="pre">int</span></code>: Integration</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">CMDB</span> <span class="pre">status</span> <span class="pre">IDs</span></span></dt>
+<dd><ul class="simple">
+<li><p>1: <code class="docutils literal notranslate"><span class="pre">int</span></code>: planned</p></li>
+<li><p>6: <code class="docutils literal notranslate"><span class="pre">int</span></code>: in operation</p></li>
+<li><p>10: <code class="docutils literal notranslate"><span class="pre">int</span></code>: inoperative</p></li>
+<li><p>11: <code class="docutils literal notranslate"><span class="pre">int</span></code>: stored</p></li>
+</ul>
+</dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>json rpc response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.set_ipv4_address">
+<span class="sig-name descname"><span class="pre">set_ipv4_address</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dev_ip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_primary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hostname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fqdn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.set_ipv4_address" title="Link to this definition"></a></dt>
+<dd><p>Set IPv4 addess and / or hostname, fqdn</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object to get contacts from</p></li>
+<li><p><strong>dev_ip</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: IP address to set</p></li>
+<li><p><strong>is_primary</strong> – <code class="docutils literal notranslate"><span class="pre">bool</span></code>: set to True if this is the primary address / hostname</p></li>
+<li><p><strong>hostname</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: hostname to set</p></li>
+<li><p><strong>fqdn</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: fqdn to set</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>json rpc response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.set_location">
+<span class="sig-name descname"><span class="pre">set_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.set_location" title="Link to this definition"></a></dt>
+<dd><p>Set location path of an object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object</p></li>
+<li><p><strong>location_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Location ID from extract_location()[1]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>json rpc response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="idoit.IdoitAPI.set_service_assignment">
+<span class="sig-name descname"><span class="pre">set_service_assignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.set_service_assignment" title="Link to this definition"></a></dt>
+<dd><p>Set service assignment from an object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object</p></li>
+<li><p><strong>service_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Service ID of service to assign</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>json rpc response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.update_cmdb_status">
-<span class="sig-name descname"><span class="pre">update_cmdb_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.update_cmdb_status" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">update_cmdb_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.update_cmdb_status" title="Link to this definition"></a></dt>
 <dd><p>Update CMDB Status of an Object
 - status IDs are listed in <code class="docutils literal notranslate"><span class="pre">create_object_by_type()</span></code></p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Object ID of i-doit object.</p></li>
+<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object.</p></li>
 <li><p><strong>status_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: CMDB status ID (planned, inoperative, etc.).</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -855,20 +1116,20 @@ dictionary with object IDs as keys.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.update_object_category">
-<span class="sig-name descname"><span class="pre">update_object_category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.update_object_category" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">update_object_category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.update_object_category" title="Link to this definition"></a></dt>
 <dd><p>Update some entries of an object in a certain category.</p>
 <ul class="simple">
 <li><p>Uses: <code class="docutils literal notranslate"><span class="pre">cmdb.category.save</span></code></p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Object ID of i-doit object.</p></li>
+<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object.</p></li>
 <li><p><strong>category</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: <strong>Category constant</strong>.</p></li>
 <li><p><strong>data_dict</strong> – <code class="docutils literal notranslate"><span class="pre">dict</span></code>: Dict with entries to update.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -876,21 +1137,21 @@ dictionary with object IDs as keys.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.update_object_category_entry">
-<span class="sig-name descname"><span class="pre">update_object_category_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.update_object_category_entry" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">update_object_category_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.update_object_category_entry" title="Link to this definition"></a></dt>
 <dd><p>Update an entry in a category of an object.</p>
 <ul class="simple">
 <li><p>Uses: <code class="docutils literal notranslate"><span class="pre">cmdb.category.save</span></code></p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Object ID of i-doit object.</p></li>
+<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object.</p></li>
 <li><p><strong>category</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: <strong>Category constant</strong>.</p></li>
-<li><p><strong>entry_id</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: ID of entry to be updated.</p></li>
+<li><p><strong>entry_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: ID of entry to be updated.</p></li>
 <li><p><strong>data_dict</strong> – <code class="docutils literal notranslate"><span class="pre">dict</span></code>: Dict with entries to update.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -898,19 +1159,19 @@ dictionary with object IDs as keys.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="idoit.IdoitAPI.update_object_title">
-<span class="sig-name descname"><span class="pre">update_object_title</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.update_object_title" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">update_object_title</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#idoit.IdoitAPI.update_object_title" title="Link to this definition"></a></dt>
 <dd><p>Update the title of a certain object</p>
 <ul class="simple">
 <li><p>Uses: <code class="docutils literal notranslate"><span class="pre">cmdb.object.update</span></code></p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Object ID of i-doit object.</p></li>
+<li><p><strong>obj_id</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Object ID of i-doit object.</p></li>
 <li><p><strong>title</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Descriptive title of object.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JSON object of response or raise exception.</p>
 </dd>
 </dl>
@@ -918,11 +1179,11 @@ dictionary with object IDs as keys.</p>
 
 </dd></dl>
 
-</div>
-<div class="section" id="modules">
-<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="module-idoitSettings">
-<span id="idoitsettings"></span><h3>idoitSettings<a class="headerlink" href="#module-idoitSettings" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Link to this heading"></a></h2>
+<section id="module-idoitSettings">
+<span id="idoitsettings"></span><h3>idoitSettings<a class="headerlink" href="#module-idoitSettings" title="Link to this heading"></a></h3>
 <p>A <code class="docutils literal notranslate"><span class="pre">dict</span></code> which should be named <strong>settings</strong> as configuration file for a specific i-doit instance.
 Pass it as <strong>parameter</strong> when creating a new object from this class.</p>
 <dl class="py attribute">
@@ -961,99 +1222,101 @@ Pass it as <strong>parameter</strong> when creating a new object from this class
 <dd><p>The Language your are using e.g. en or de</p>
 </dd></dl>
 
-</div>
-</div>
-<div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="module-examples.Example_add_new_switch">
-<span id="example-add-new-switch-py"></span><h3>Example_add_new_switch.py<a class="headerlink" href="#module-examples.Example_add_new_switch" title="Permalink to this headline">¶</a></h3>
-<p>Example-Script for i-doit API class - add a new switch / create new switch object</p>
-</div>
-<div class="section" id="module-examples.Example_connect_ports">
-<span id="example-connect-ports-py"></span><h3>Example_connect_ports.py<a class="headerlink" href="#module-examples.Example_connect_ports" title="Permalink to this headline">¶</a></h3>
-<p>Example-Script for i-doit API class - Connecting and/ or creating ports</p>
-</div>
-<div class="section" id="module-examples.Example_Constants">
-<span id="example-constants-py"></span><h3>Example_Constants.py<a class="headerlink" href="#module-examples.Example_Constants" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<section id="module-examples.Example_add_new_switch">
+<span id="example-add-new-switch-py"></span><h3>Example_add_new_switch.py<a class="headerlink" href="#module-examples.Example_add_new_switch" title="Link to this heading"></a></h3>
+<p>Example-Script for i-doit API class - add a new switch to idoit / create new switch object</p>
+</section>
+<section id="module-examples.Example_connect_ports">
+<span id="example-connect-ports-py"></span><h3>Example_connect_ports.py<a class="headerlink" href="#module-examples.Example_connect_ports" title="Link to this heading"></a></h3>
+<p>Example-Script for i-doit API class - Connecting and / or creating ports</p>
+</section>
+<section id="module-examples.Example_Constants">
+<span id="example-constants-py"></span><h3>Example_Constants.py<a class="headerlink" href="#module-examples.Example_Constants" title="Link to this heading"></a></h3>
 <p>Example-Script for i-doit API class - Display all available constants from idoit (Method cmdb.constants)</p>
 <ul class="simple">
 <li><p>show structure of one of the global categories (Method cmdb.category_info)</p></li>
 <li><p>show structure of one of the specific categories (Method cmdb.category_info)</p></li>
 <li><p>show structure of one of the custom categories (Method cmdb.category_info)</p></li>
+<li><p>show a certain category of an specific object (Method cmdb.category.read)</p></li>
 </ul>
-</div>
-<div class="section" id="module-examples.Example_create_panel_1ru_24x_rj45">
-<span id="example-create-panel-1ru-24x-rj45-py"></span><h3>Example_create_panel_1ru_24x_rj45.py<a class="headerlink" href="#module-examples.Example_create_panel_1ru_24x_rj45" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="module-examples.Example_create_panel_1ru_24x_rj45">
+<span id="example-create-panel-1ru-24x-rj45-py"></span><h3>Example_create_panel_1ru_24x_rj45.py<a class="headerlink" href="#module-examples.Example_create_panel_1ru_24x_rj45" title="Link to this heading"></a></h3>
 <p>Example-Script for i-doit API class - Create 19’ Patchpanel with height 1RU and 24x RJ45 Ports</p>
-</div>
-<div class="section" id="module-examples.Example_find_name_ip_serial">
-<span id="example-find-name-ip-serial-py"></span><h3>Example_find_name_ip_serial.py<a class="headerlink" href="#module-examples.Example_find_name_ip_serial" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.Example_create_panel_1ru_24x_rj45.create_panel_1ru_24x_rj45_new">
+<span class="sig-prename descclassname"><span class="pre">examples.Example_create_panel_1ru_24x_rj45.</span></span><span class="sig-name descname"><span class="pre">create_panel_1ru_24x_rj45_new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pan_title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_start_nr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_start_nr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#examples.Example_create_panel_1ru_24x_rj45.create_panel_1ru_24x_rj45_new" title="Link to this definition"></a></dt>
+<dd><p>Create 19’ Patchpanel with height 1RU and 24x RJ45 Ports</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pan_title</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Name of patchpanel</p></li>
+<li><p><strong>prefix_in</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Prefix of input port</p></li>
+<li><p><strong>in_start_nr</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Number of first input port</p></li>
+<li><p><strong>prefix_out</strong> – <code class="docutils literal notranslate"><span class="pre">str</span></code>: Prefix of output port</p></li>
+<li><p><strong>out_start_nr</strong> – <code class="docutils literal notranslate"><span class="pre">int</span></code>: Number of first output port</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Object ID of new panel.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-examples.Example_find_name_ip_serial">
+<span id="example-find-name-ip-serial-py"></span><h3>Example_find_name_ip_serial.py<a class="headerlink" href="#module-examples.Example_find_name_ip_serial" title="Link to this heading"></a></h3>
 <p>Example-Script for i-doit API class - Demo usage of method find_host_ip_serial()</p>
-</div>
-<div class="section" id="module-examples.Example_List_Switch_Info">
-<span id="example-list-switch-info-py"></span><h3>Example_List_Switch_Info.py<a class="headerlink" href="#module-examples.Example_List_Switch_Info" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="module-examples.Example_List_Switch_Info">
+<span id="example-list-switch-info-py"></span><h3>Example_List_Switch_Info.py<a class="headerlink" href="#module-examples.Example_List_Switch_Info" title="Link to this heading"></a></h3>
 <p>Example-Script for i-doit API class - Demo usage of method get_all_switches()</p>
 <ul class="simple">
 <li><p>get all switches which are in operation (‘cmdb_status_title’: ‘In Betrieb’, ‘cmdb_status’: 6)</p></li>
 <li><p>list: Title, ObjID, Hostname, Domain and IP (address informations from category C__CATG__IP)</p></li>
 </ul>
-</div>
-<div class="section" id="module-examples.Example_read_CDMB_status_of_device">
-<span id="example-read-cdmb-status-of-device-py"></span><h3>Example_read_CDMB_status_of_device.py<a class="headerlink" href="#module-examples.Example_read_CDMB_status_of_device" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="module-examples.Example_read_CDMB_status_of_device">
+<span id="example-read-cdmb-status-of-device-py"></span><h3>Example_read_CDMB_status_of_device.py<a class="headerlink" href="#module-examples.Example_read_CDMB_status_of_device" title="Link to this heading"></a></h3>
 <p>Example-Script for i-doit API class - Query CMDB status of a device</p>
-</div>
-<div class="section" id="module-examples.Example_Request_grouping">
-<span id="example-request-grouping-py"></span><h3>Example_Request_grouping.py<a class="headerlink" href="#module-examples.Example_Request_grouping" title="Permalink to this headline">¶</a></h3>
-<p>Example-Script for i-doit API class - group multiple JSON requests in one call</p>
-</div>
-</div>
-</div>
+</section>
+<section id="module-examples.Example_Request_grouping">
+<span id="example-request-grouping-py"></span><h3>Example_Request_grouping.py<a class="headerlink" href="#module-examples.Example_Request_grouping" title="Link to this heading"></a></h3>
+<p>Example-Script for i-doit API class - group multiple JSON requests in one HTTP call - batch requests</p>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        
-        &copy; Copyright 2022, x84net
-
-    </p>
+    <p>&#169; Copyright 2022, x84net.</p>
   </div>
-    
-    
-    
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
