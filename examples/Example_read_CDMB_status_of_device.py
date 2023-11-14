@@ -21,13 +21,12 @@ import json
 
 if __name__ == "__main__":
     # Logging
-    logging.basicConfig( level = logging.INFO,
-    #logging.basicConfig( level = logging.DEBUG,
-                         format = '%(message)s',
-                         #format = '%(funcName)s:%(message)s',
-                         #filename = logFileLocation,
-                         #filemode = 'a'
-                        )
+    logging.basicConfig(level = logging.INFO,
+                        format = '%(message)s',
+                        #format = '%(funcName)s:%(message)s',
+                        #filename = logFileLocation,
+                        #filemode = 'a'
+    )
     log = logging.getLogger()
 
     # create API instance and catch all defined exceptions
@@ -43,6 +42,7 @@ if __name__ == "__main__":
         log.error("System ERR: {}\n".format(e_S))
         exit()
 
+    # uncomment to see JSON request that is send to idoit
     #pyDoit.log_json_request = True
 
     # Object ID to query

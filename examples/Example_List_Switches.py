@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
-Example-Script for i-doit API class - group multiple JSON requests in one HTTP call - batch requests
+Example-Script for i-doit API class - Demo usage of method get_all_switches()
+
+- get all switches which are in operation ('cmdb_status_title': 'In Betrieb', 'cmdb_status': 6)
+- list: Title, ObjID, Hostname, Domain and IP (address informations from category C__CATG__IP)
 """
 
 from sys import version_info, exit
@@ -14,6 +17,7 @@ import idoitSettings_Demo as idoitSettings
 
 import logging
 import json
+from pprint import pformat                          # nice output for debugging
 from requests import HTTPError
 
 import urllib3
@@ -46,28 +50,24 @@ if __name__ == "__main__":
     # uncomment to see JSON request that is send to idoit
     #pyDoit.log_json_request = True
 
-    #group multiple requests in one call
-    data = [
-        {
-            'id': 1,
-            'version': '2.0',
-            'method': 'idoit.search',
-            'params': {
-                'q': "10.20.0.4",
-                'apikey': pyDoit.apikey,
-                'language': pyDoit.language
-            },
-        },
-        {
-            'id': 2,
-            'version': '2.0',
-            'method': 'idoit.search',
-            'params': {
-                'q': "10.20.0.2",
-                'apikey': pyDoit.apikey,
-                'language': pyDoit.language
-            },
-        }
-    ]
-    res = pyDoit.send_rpc_d(data)
-    log.info("group search result:\n{}".format(json.dumps(res, indent=4, sort_keys=True)))
+    res = pyDoit.get_all_switches()
+
+    if res['result']:
+        log.info("get_all_switches {}\n Found: {}\n".format(json.dumps(res, indent=4, sort_keys=True), len(res['result'])))
+    else:
+        log.info("No switches found")
+        exit(1)
+
+    log.info("All switches that are 'in operation':\n")
+    for h in res['result']:
+        # print only switches that are "in operation"
+        if h['cmdb_status'] != 6:
+            continue
+
+        log.info("Title: {}\nObjID: {}".format(h['title'], h['id']))
+
+        addr = pyDoit.get_category_from_object(h['id'],'C__CATG__IP')
+        log.debug("addr:\n{}\n".format(pformat(addr['result'])))
+
+        for x in addr['result']:
+            log.info("Hostname: {}\nDomain: {}\nIP: {}\n".format(x['hostname'], x['domain'], x['hostaddress']['ref_title']))

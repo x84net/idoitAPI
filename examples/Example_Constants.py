@@ -5,6 +5,7 @@ Example-Script for i-doit API class - Display all available constants from idoit
 - show structure of one of the global categories (Method cmdb.category_info)
 - show structure of one of the specific categories (Method cmdb.category_info)
 - show structure of one of the custom categories (Method cmdb.category_info)
+- show a certain category of an specific object (Method cmdb.category.read)
 """
 
 from sys import version_info, exit
@@ -26,12 +27,12 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 if __name__ == "__main__":
     # Logging
-    logging.basicConfig( level = logging.INFO,
-                         format = '%(message)s',
-                         #format = '%(funcName)s:%(message)s',
-                         #filename = logFileLocation,
-                         #filemode = 'a'
-                        )
+    logging.basicConfig(level = logging.INFO,
+                        format = '%(message)s',
+                        #format = '%(funcName)s:%(message)s',
+                        #filename = logFileLocation,
+                        #filemode = 'a'
+    )
     log = logging.getLogger()
 
 
@@ -60,3 +61,6 @@ if __name__ == "__main__":
     res = pyDoit.get_custom_category_info('C__CATG__CUSTOM_FIELDS_BGV_A3_PRFUNG_PROTOKOLL')
     log.info("custom category 'C__CATG__CUSTOM_FIELDS_BGV_A3_PRFUNG_PROTOKOLL':\n{}".format(json.dumps(res, indent=4, sort_keys=True)))
 
+    # Example: Switch Switch HQ Infratructure A ID: 3077
+    res = pyDoit.get_category_from_object(3077, 'C__CATG__FORMFACTOR')
+    log.info("Object ID 3077 - 'C__CATG__FORMFACTOR':\n{}".format(json.dumps(res, indent=4,)))

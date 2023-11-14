@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Example-Script for i-doit API class - Connecting and/ or creating ports
+Example-Script for i-doit API class - Connecting and / or creating ports
 """
 
 from sys import version_info
@@ -21,14 +21,56 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
+# Create port 'Console0'
+def create_console0(obj_id):
+    d = {
+        'title': 'Console0',
+        'description': 'Access to serial console',
+        'speed': 9600,
+        'speed_type': 'C__PORT_SPEED__BIT_S',
+        'active': '1',
+        'plug_type': 'C__CONNECTION_TYPE__RJ45',
+    }
+    res = pyDoit.update_object_category(obj_id, 'C__CATG__NETWORK_PORT', d)
+    log.info("New port Console0:\n{}\nhttps://demo.i-doit.com/?objID={}&catgID=94".format(
+                                                                                json.dumps(res['result'], indent=4, sort_keys=False),
+                                                                                obj_id))
+
+
+# Connect ports of two objects
+def connect_ports(obj_id_a, port_title_a, obj_id_b, port_title_b):
+    obj_id_title_a = None
+    obj_id_title_b = None
+
+    # get connectors from devices - use batch requests
+    pyDoit.get_category_from_object(obj_id_a, 'C__CATG__CONNECTOR', batch_request=True)
+    pyDoit.get_category_from_object(obj_id_b, 'C__CATG__CONNECTOR', batch_request=True)
+    res_d, lst_q, dct_q = pyDoit.send_batch()
+
+    # search for port names in title of first request to get IDs
+    for i in res_d[1]['result']:
+        if port_title_a == i['title']:
+            obj_id_title_a = int(i['id'])
+            break
+
+    # search for port names in title of second request to get IDs
+    for i in res_d[2]['result']:
+        if port_title_b == i['title']:
+            obj_id_title_b = int(i['id'])
+            break
+
+    # connect ports
+    res = pyDoit.update_object_category_entry(obj_id_a, 'C__CATG__CONNECTOR', obj_id_title_a, {'assigned_connector': obj_id_title_b})
+    return ((obj_id_a, obj_id_title_a),(obj_id_b, obj_id_title_b))
+
 if __name__ == "__main__":
     # Logging
-    logging.basicConfig( level = logging.INFO,
-                         format = '%(message)s',
-                         #format = '%(funcName)s:%(message)s',
-                         #filename = logFileLocation,
-                         #filemode = 'a'
-                        )
+    logging.basicConfig(level = logging.INFO,
+                        format = '%(message)s',
+                        #format = '%(funcName)s:%(message)s',
+                        #filename = logFileLocation,
+                        #filemode = 'a'
+    )
     log = logging.getLogger()
 
     # create API instance and catch all defined exceptions
@@ -44,49 +86,8 @@ if __name__ == "__main__":
         log.error("System ERR: {}\n".format(e_S))
         exit()
 
+    # uncomment to see JSON request that is send to idoit
     #pyDoit.log_json_request = True
-
-
-    # Create port 'Console0'
-    def create_console0_by_id(obj_id):
-        d = {
-            'title': 'Console0',
-            'description': 'Access to serial console',
-            'speed': 9600,
-            'speed_type': {'const': 'C__PORT_SPEED__BIT_S',},
-            'active': {'title': 'Ja', 'value': '1'},
-            'plug_type': {'const': 'C__CONNECTION_TYPE__RJ45',},
-        }
-        res = pyDoit.update_object_category(obj_id, 'C__CATG__NETWORK_PORT', d)
-        log.info("New port Console0:\n{}".format(json.dumps(res['result'], indent=4, sort_keys=False)))
-
-
-    # Connect ports of two objects
-    def connect_ports(obj_id_a, port_title_a, obj_id_b, port_title_b):
-        obj_id_title_a = None
-        obj_id_title_b = None
-
-        # get connectors from devices
-        pyDoit.return_query_do_not_send = True
-        pyDoit.build_batch(pyDoit.get_category_from_object(obj_id_a, 'C__CATG__CONNECTOR'))
-        pyDoit.build_batch(pyDoit.get_category_from_object(obj_id_b, 'C__CATG__CONNECTOR'))
-        pyDoit.return_query_do_not_send = False
-        res,lst = pyDoit.send_batch()
-
-        # search for port names in title to get IDs
-        for i in res[1]['result']:
-            if port_title_a == i['title']:
-                obj_id_title_a = i['id']
-                break
-
-        for i in res[2]['result']:
-            if port_title_b == i['title']:
-                obj_id_title_b = i['id']
-                break
-
-        # connect ports
-        res = pyDoit.update_object_category_entry(obj_id_a, 'C__CATG__CONNECTOR', obj_id_title_a, {'assigned_connector': obj_id_title_b})
-        return ((obj_id_a, obj_id_title_a),(obj_id_b, obj_id_title_b))
 
     #------------------------------------------------------------------------------------------
     # Connect Switch HQ Infratructure B (id: 3081) Port 02 with HQ Gateway (id: 944) Port eth2 
@@ -96,7 +97,7 @@ if __name__ == "__main__":
     rt_id = 944             # Router HQ Gateway
     rt_port = 'eth2'
     res = connect_ports(sw_id, sw_port, rt_id, rt_port)
-    log.info("IDs:\n{}".format(pformat(res)))
+    log.info("IDs of connected objects (Switch to Router):\n{}\n".format(pformat(res)))
 
 
     #--------------------------------------------------------------------------------------------------
@@ -106,8 +107,8 @@ if __name__ == "__main__":
     sw_port = 'Port 03'
     pan_id = 993            # Panel HQ Intern 01 B
     pan_port = 'Port 02'
-    connect_ports(sw_id, sw_port, pan_id, pan_port)
-    log.info("IDs:\n{}".format(pformat(res)))
+    res = connect_ports(sw_id, sw_port, pan_id, pan_port)
+    log.info("IDs of connected objects (Switch to Patchpanel):\n{}\n".format(pformat(res)))
 
 
     #------------------------------------------------------------------------------------------------
@@ -115,4 +116,4 @@ if __name__ == "__main__":
     #------------------------------------------------------------------------------------------------
     #devID = '3081'
     devID = '944'
-    create_console0_by_id(devID)
+    create_console0(devID)

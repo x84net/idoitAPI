@@ -22,12 +22,12 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 if __name__ == "__main__":
     # Logging
-    logging.basicConfig( level = logging.INFO,
-                         format = '%(message)s',
-                         #format = '%(funcName)s:%(message)s',
-                         #filename = logFileLocation,
-                         #filemode = 'a'
-                        )
+    logging.basicConfig(level = logging.INFO,
+                        format = '%(message)s',
+                        #format = '%(funcName)s:%(message)s',
+                        #filename = logFileLocation,
+                        #filemode = 'a'
+    )
     log = logging.getLogger()
 
     # create API instance and catch all defined exceptions
@@ -43,6 +43,7 @@ if __name__ == "__main__":
         log.error("System ERR: {}\n".format(e))
         exit()
 
+    # uncomment to see JSON request that is send to idoit
     #pyDoit.log_json_request = True
 
     res1 = pyDoit.find_host_ip_serial('swinfrab', '10.20.0.4','asdasdasd1234')
